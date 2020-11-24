@@ -3,7 +3,7 @@
  *main-executes simple commans
  *Return:0-success, non-zero-fail.
  */
-int main(void)
+int main(int argc __attribute__((unused)), char **argv1)
 {
 int n;
 size_t len;
@@ -30,7 +30,7 @@ wait(NULL);
 else
 {
 if (execve(argv[0], argv, NULL) == -1)
-	perror(argv[0]);
+	perror(argv1[0]);
 }
 }
 if (strcmp(ccommand, "exit") == 0)
