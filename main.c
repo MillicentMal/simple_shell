@@ -13,7 +13,7 @@ char *argv[] = {""};
 
 while (1)
 {
-printf("#cifun$ ");
+printf("$ ");
 n = getline(&command, &len, stdin);
 ccommand = (char *) malloc(_strlen(command - 1));
 _strcpy(ccommand, command);
