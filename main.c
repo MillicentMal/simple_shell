@@ -39,7 +39,7 @@ if (execve(argv[0], argv, NULL) == -1)
 	perror(argv1[0]);
 }
 }
-if (strcmp(ccommand, "exit") == 0)
+if (_strcmp(ccommand, "exit") == 0)
 {
 
 break;
