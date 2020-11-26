@@ -17,7 +17,7 @@ char *argv[] = {""};
 
 while (1 && (isatty(STDIN_FILENO)))
 {
-write(1, "$ ", 2);
+write(1, "#cisfun$  ", 9);
 n = getline(&command, &len, stdin);
 ccommand = (char *) malloc(_strlen(command - 1));
 
