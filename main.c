@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <strings.h>
+#include <stdio.h>
 /**
  *main-executes simple commans
  *Return:0-success, non-zero-fail.
@@ -13,9 +14,10 @@ size_t len;
 char *command = 0;
 char *ccommand;
 char *argv[] = {""};
-while (1)
+
+while (1 && (isatty(STDIN_FILENO)))
 {
-printf("$ ");
+write(1, "$ ", 2);
 n = getline(&command, &len, stdin);
 ccommand = (char *) malloc(_strlen(command - 1));
 
@@ -39,10 +41,11 @@ if (execve(argv[0], argv, NULL) == -1)
 }
 if (strcmp(ccommand, "exit") == 0)
 {
-exit(0);
+
 break;
 }
 }
+free(command);
 return (0);
 }
 
