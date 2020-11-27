@@ -42,7 +42,7 @@ if (execve(argv[0], argv, NULL) == -1)
 if (_strcmp(ccommand, "exit") == 0)
 {
 
-break;
+exit(0);
 }
 }
 free(command);
