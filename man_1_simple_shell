@@ -1,0 +1,50 @@
+.TH SIMPLE_SHELL "ALX-Holberton"
+.SH NAME
+.B hsh
+- A simple UNIX command interpreter.
+.SH SYNOPSIS
+.B ./hsh
+.SH DESCRIPTION
+This program is a simple UNIC command line interpreter. It displays a prompt and waits for the user to type a command. A command line always ends with a new line.
+The prompt is displayed again each time a command has been executed.
+The command lines are made only of one word. 
+If an executable cannot be found, print an error message and display the prompt again.
+.SS Overview
+It displays a prompt and waits for the user to type a command. A command line always ends with a new line.
+The prompt is displayed again each time a command has been executed.
+The command lines are made only of one word.
+If an executable cannot be found, print an error message and display the prompt again.
+.SS Path Search
+When locating a command, this shell first looks to see if it has an executable by that name in the PATH of env. Then it looks for builtin commands by that name.
+
+.SH MODES
+.B hsh
+Interactive mode
+.SS
+EXAMPLE:
+$ ls -l
+.B ./hsh
+Non-interactive mode
+.SS
+EXAMPLE:
+$ echo "ls -l" | ./hsh
+
+.SH
+
+.B NB: OUR PROGRAM is yet to:
+.TP 
+Handle 
+.I arguments
+.TP
+Handle 
+.I PATH
+.TP
+Handle 
+.I builtin commands
+
+.SH SEE ALSO
+.I sh(1), Betty(1)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+David Mutune, Millicent Malinga
