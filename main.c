@@ -26,7 +26,7 @@ _strcpy(ccommand, command);
 argv[0] = ccommand;
 argv[1] = NULL;
 if (n == -1)
-	puts("ERROR!");
+	perror("ERROR!");
 else
 {
 if (fork() != 0) /*We are in parent process, wait for child*/
