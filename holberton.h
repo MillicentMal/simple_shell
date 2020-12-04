@@ -1,6 +1,6 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
-
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

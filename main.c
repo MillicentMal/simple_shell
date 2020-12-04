@@ -29,7 +29,8 @@ if (n == -1)
 	perror("ERROR!");
 else
 {
-if (fork() != 0) /*We are in parent process, wait for child*/
+int pid = fork();
+if (pid != 0) /*We are in parent process, wait for child*/
 {
 wait(NULL);
 }
